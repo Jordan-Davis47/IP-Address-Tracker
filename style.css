@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik';
+    /* background-color: lightgray; */
+}
+
+body {
+    height: 100vh;
+    position:relative;
+    z-index: 2;
+}
+
+.top-section {
+    height: 300px;
+    width: 100vw;
+    background: url(./ip-address-tracker-master/images/pattern-bg.png) no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+    font-weight: 500;
+}
+
+.ip-input {
+    height: 40px;
+    width: 70%;
+    max-width: 520px;
+    border: solid 1px black;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;;
+    margin-top: 30px;
+    cursor: pointer;
+    caret-color: auto;
+    padding-left: 5px;
+}
+
+.ip-input:focus {
+    outline: none;
+}
+
+.ip-button {
+    height: 42px;
+    width: 40px;
+    position: relative;
+    left: -5px;
+    top: 1px;
+    background-color: black;
+    border: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
+}
+
+.ip-button:active {
+    background-color: hsl(0, 0%, 17%);
+}
+
+span {
+    color: white;
+}
+
+.ip-info {
+    height: 280px;
+    width: 300px;
+    max-width: 800px;
+    background-color: #fff;
+    margin: auto;
+    position: relative;
+    top: -175px;
+    border-radius: 15px;;
+}
+
+.ip-header {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    color: gray;
+    margin-top: 10px;
+}
+
+.ip-header:nth-of-type(1) {
+    padding-top: 10px;
+}
+
+.ip-result {
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 10px;
+    
+}
+
+#map {
+    height: 650px;
+    position: relative;
+    top: -350px;
+    z-index: -1;
+}
+
+
+@media (min-width: 850px ) {
+
+    body {
+        overflow-y: hidden;
+    } 
+
+    .ip-input {
+        width: 40%;
+    }
+
+    .ip-info {
+        display: flex;
+        justify-content: center ;
+        align-items: center;
+        width: 70%;
+        height: 25%;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .info-block {
+        display: flex;
+        flex-direction: column;
+        border-right: 1px solid rgba(128,128,128, 0.5);
+        padding-right: 25px;
+        padding-left: 25px;
+        height: 100px;
+    }
+
+    .ip-result {
+        margin-top: 10px;
+    }
+
+    /* .info-block:nth-of-type(1) {
+        padding-left: 10px;
+    } */
+
+    .info-block:nth-of-type(4) {
+        border-right: none;
+    }
+
+    .ip-header {
+        margin: 0;
+    }
+
+    #map {
+        height: 675px; 
+        /* margin-top: 200px; */
+        top: -265px;
+    }
+}
